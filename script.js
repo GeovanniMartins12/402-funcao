@@ -104,17 +104,18 @@ let resposta = document.querySelector("p");
 let botao = document.querySelector("button");
 
 let usuarios = [
-    {nome: "Lucinda", email: "lili", senha:123},
-    {nome: "Jubes", email: "jube", senha:123},
-    {nome: "Claudia", email: "caca", senha:123}
-]
+    {email: "lili", senha:123},
+    {email: "jube", senha:123},
+    {email: "caca", senha:123}
+];
 
 function validarLogin(){
     for(let nomem of usuarios){
         if(inputEmail.value == nomem.email && inputSenha.value == nomem.senha){
             resposta.innerHTML = "Login Aprovado";
             resposta.style.color = "blue";
-            resposta.style.border = "2px blue solid";
+            resposta.style.border = "2px blue solid"; 
+	    return;
         }
         else{
             resposta.innerHTML = "Login Inválido";
